@@ -1,0 +1,180 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* Changed from gradient background to white */
+  background: white;
+  min-height: 100vh;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 40px;
+  /* Changed text color from white to dark for white background */
+  color: #2c3e50;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  /* Removed text shadow since background is now white */
+  text-shadow: none;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Voice agent container */
+.voice-agent-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  /* Changed background to light gray to contrast with white body */
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Iframe wrapper */
+.iframe-wrapper {
+  flex-shrink: 0;
+  /* Changed background to white to contrast with container */
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.iframe-wrapper iframe {
+  display: block;
+  width: 400px;
+  height: 500px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Agent info */
+.agent-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.agent-info h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.agent-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.agent-info li {
+  /* Changed background to white for better contrast */
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  /* Changed border color to orange for CTA accent */
+  border-left: 4px solid #ff6b35;
+  font-size: 1rem;
+  color: #555;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.agent-info li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Added orange background on hover for CTA effect */
+  background: #fff4f0;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  margin-top: 40px;
+  /* Changed footer color to dark for white background */
+  color: #666;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .voice-agent-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .iframe-wrapper {
+    align-self: center;
+  }
+
+  .iframe-wrapper iframe {
+    width: 350px;
+    height: 450px;
+  }
+
+  .agent-info {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframe-wrapper iframe {
+    width: 300px;
+    height: 400px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .voice-agent-container {
+    padding: 15px;
+  }
+}
