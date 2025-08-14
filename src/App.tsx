@@ -8,7 +8,7 @@ export default function Page() {
 
   return (
     <main
-      className={`min-h-screen p-6 flex flex-col items-center justify-center transition-all duration-300 ${
+      className={`min-h-screen px-4 py-6 sm:p-6 flex flex-col items-center justify-center transition-all duration-300 ${
         isDarkMode
           ? "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
           : "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"
@@ -16,12 +16,12 @@ export default function Page() {
     >
       <button
         onClick={() => setIsDarkMode(!isDarkMode)}
-        className={`fixed top-6 right-6 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
+        className={`fixed top-4 right-4 sm:top-6 sm:right-6 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
           isDarkMode ? "bg-slate-700 text-yellow-400 hover:bg-slate-600" : "bg-white text-slate-600 hover:bg-slate-50"
         }`}
       >
         {isDarkMode ? (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -30,7 +30,7 @@ export default function Page() {
             />
           </svg>
         ) : (
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -41,16 +41,16 @@ export default function Page() {
         )}
       </button>
 
-      <div className="text-center mb-8 space-y-4">
+      <div className="text-center mb-6 sm:mb-8 space-y-2 sm:space-y-4">
         <h1
-          className={`text-4xl md:text-5xl font-bold tracking-tight transition-colors duration-300 ${
+          className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight transition-colors duration-300 ${
             isDarkMode ? "text-white" : "text-slate-800"
           }`}
         >
           Voice Agent
         </h1>
         <p
-          className={`text-lg max-w-md mx-auto leading-relaxed transition-colors duration-300 ${
+          className={`text-base sm:text-lg max-w-xs sm:max-w-md mx-auto leading-relaxed transition-colors duration-300 ${
             isDarkMode ? "text-slate-300" : "text-slate-600"
           }`}
         >
