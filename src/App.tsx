@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import VoiceAgent from "./components/voice-agent"
+import InstallButton from "./components/InstallButton"
 
 export default function Page() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -14,6 +15,8 @@ export default function Page() {
           : "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100"
       }`}
     >
+      <InstallButton isDarkMode={isDarkMode} />
+      
       <button
         onClick={() => setIsDarkMode(!isDarkMode)}
         className={`fixed top-4 right-4 sm:top-6 sm:right-6 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
